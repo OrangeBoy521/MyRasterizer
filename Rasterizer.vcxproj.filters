@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{afed7bcd-2ab0-4ebe-b789-9eab2fde52a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Math">
+      <UniqueIdentifier>{a9b919b2-ff3a-4415-95d8-1a3a0b1d4362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CG">
+      <UniqueIdentifier>{fd27d5e1-a892-4bf7-bb47-2ed25e7d805c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shader">
+      <UniqueIdentifier>{3dfc1363-0401-46d7-91f4-14d78c87dc1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shader">
+      <UniqueIdentifier>{42fec6d5-ac33-4ddd-b6c4-6f92de7ee4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IMGUI">
+      <UniqueIdentifier>{a6b34bbd-01c2-4bfc-a183-b9d0c2b6a881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\IMGUI">
+      <UniqueIdentifier>{f968cdea-8972-4180-bc78-ad165cefcbce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Header">
+      <UniqueIdentifier>{6ffbc6e2-269e-40eb-a688-265c59a85958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Texture">
+      <UniqueIdentifier>{93fad592-1189-4b19-ae27-ce1dad924bfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageSource">
+      <UniqueIdentifier>{3047e310-5baa-4cb1-9c43-5e2a0968f967}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Rasterizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBuffer.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix3x3.cpp">
+      <Filter>Resource Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix4x4.cpp">
+      <Filter>Resource Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Resource Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>Resource Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector4D.cpp">
+      <Filter>Resource Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawSomething.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Resource Files\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui_demo.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui_draw.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui_tables.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui_widgets.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui_impl_opengl3.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="More\Include\Imgui\imgui_impl_glfw.cpp">
+      <Filter>Resource Files\IMGUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix3x3.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4x4.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector4D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawSomething.h">
+      <Filter>Header Files\CG</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files\CG</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imgui.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imgui_internal.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imstb_rectpack.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imstb_textedit.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imstb_truetype.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imgui_impl_opengl3.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="More\Include\Imgui\imgui_impl_glfw.h">
+      <Filter>Header Files\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files\CG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="wall.jpg">
+      <Filter>ImageSource</Filter>
+    </Image>
+    <Image Include="container.jpg">
+      <Filter>ImageSource</Filter>
+    </Image>
+    <Image Include="test.jpg">
+      <Filter>ImageSource</Filter>
+    </Image>
+    <Image Include="JPG\hello.jpg">
+      <Filter>ImageSource</Filter>
+    </Image>
+    <Image Include="JPG\red.jpg">
+      <Filter>ImageSource</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

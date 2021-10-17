@@ -1,0 +1,3 @@
+﻿  Rasterizer.cpp
+E:\Rasterizer\Rasterizer\Texture.h(29,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Rasterizer.vcxproj -> E:\Rasterizer\Rasterizer\x64\Debug\Rasterizer.exe
