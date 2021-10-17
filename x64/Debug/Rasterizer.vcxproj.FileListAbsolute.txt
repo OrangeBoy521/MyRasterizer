@@ -1,3 +1,0 @@
-E:\Rasterizer\x64\Debug\Rasterizer.exe
-E:\Rasterizer\softRasterizer\x64\Debug\Rasterizer.exe
-E:\Rasterizer\Rasterizer\x64\Debug\Rasterizer.exe
