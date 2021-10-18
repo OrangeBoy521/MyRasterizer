@@ -1,0 +1,11 @@
+﻿  MyRasterizer.cpp
+E:\MyRasterizer\Shader.h(16,3): error C3861: 'Matrix4x4': identifier not found
+E:\MyRasterizer\Shader.h(16,16): error C3861: 'finalMatrix': identifier not found
+E:\MyRasterizer\Shader.h(16,30): error C3861: 'ViewportMat4x4': identifier not found
+E:\MyRasterizer\Shader.h(17,4): error C2065: 'OrthoMatrix4x4': undeclared identifier
+E:\MyRasterizer\Shader.h(17,4): error C3861: 'OrthoMatrix4x4': identifier not found
+E:\MyRasterizer\Shader.h(17,58): error C2065: 'ProjectionMat4x4': undeclared identifier
+E:\MyRasterizer\Shader.h(17,58): error C3861: 'ProjectionMat4x4': identifier not found
+E:\MyRasterizer\Shader.h(25,25): error C3861: 'finalMatrix': identifier not found
+E:\MyRasterizer\Shader.h(14,7): error C2995: 'void ShaderMethod::VertexShader(Draw<T> &)': function template has already been defined
+E:\MyRasterizer\Shader.h(14): message : see declaration of 'ShaderMethod::VertexShader'

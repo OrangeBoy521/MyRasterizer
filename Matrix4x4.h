@@ -3,13 +3,15 @@
 #define MATRIX4X4_H
 
 #include <cmath>
+#include <corecrt_math_defines.h>
 #include "Vector3D.h"
+#include "Vector4D.h"
 
 template <typename T>
 class Matrix4x4
 {
 public:
-	Matrix4x4() = default;
+	Matrix4x4();
 	Matrix4x4(
 		T e0, T e1, T e2, T e3,
 		T e4, T e5, T e6, T e7,
@@ -20,13 +22,18 @@ public:
 	Matrix4x4& operator=(const Matrix4x4&);
 	~Matrix4x4() = default;
 private:
-	std::shared_ptr<T[]> e(new T[16]());
+	std::shared_ptr<int[]> e = std::make_shared<int[16]>();
 };
 
 template <typename T>
 Matrix4x4<T>::Matrix4x4()
 {
-	std::shared_ptr<T[]> temp(new T[16](e0, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e16));
+	std::shared_ptr<T[]> temp(new T[16](
+		1.0f, 0, 0, 0,
+		0, 1.0f, 0, 0,
+		0, 0, 1.0f, 0,
+		0, 0, 0, 1.0f
+		));
 	e = temp;
 }
 
@@ -115,7 +122,7 @@ template<typename T>
 Matrix4x4<T> RotateZ(T angle)
 {
 	float tempAngle = angle / 180.0f * M_PI;
-	return Matrix4x4<t>(
+	return Matrix4x4<T>(
 		cos(tempAngle), -sin(tempAngle), 0, 0,
 		sin(tempAngle), cos(tempAngle), 0, 0,
 		0, 0, 1, 0,
@@ -124,13 +131,13 @@ Matrix4x4<T> RotateZ(T angle)
 }
 
 template <typename T>
-Matrix4x4<T> OrthoMatrix4x4(T fov,T aspect,T znear)
+Matrix4x4<T> OrthoMatrix4x4(T fov,T aspect,T znear,T zfar)
 {
 	T half_height = tan(fov / 2) * znear;
 	T width = 2 * half_height * aspect;
 
 	return Matrix4x4<T>(
-		2.0f / (width), 0, 0, 0
+		2.0f / (width), 0, 0, 0,
 		0, 2.0f / (half_height * 2), 0, 0,
 		0, 0, 2.0f / (znear - zfar), 0, 0,
 		0, 0, 0, 1
@@ -163,7 +170,7 @@ Matrix4x4<T> cameraPosition(Vector3D<T> camPosition)
 		0, 0, 0, 1
 	);
 	Matrix4x4<T> cameraTrans(
-		1, 0, 0, -camPosition, x,
+		1, 0, 0, -camPosition.x,
 		0, 1, 0, -camPosition.y,
 		0, 0, 1, -camPosition.z,
 		0, 0, 0, 1
@@ -180,5 +187,16 @@ Matrix4x4<T> ViewportMat4x4(const unsigned int width,const unsigned int height)
 		0, 0, 1, 0,
 		0, 0, 0, 1
 		);
+}
+
+template <typename T>
+Vector4D<T> Matrix4x4Vec4(Matrix4x4<T>& matrix,Vector4D<T>& v)
+{
+	return Vector4D<T>(
+		(*matrix)[0] * v.x + (*matrix)[1] * v.y + (*matrix)[2] * v.z + (*matrix)[3] * v.w,
+		(*matrix)[4] * v.x + (*matrix)[5] * v.y + (*matrix)[6] * v.z + (*matrix)[3] * v.w,
+		(*matrix)[8] * v.x + (*matrix)[9] * v.y + (*matrix)[10] * v.z + (*matrix)[11] * v.w,
+		(*matrix)[12] * v.x + (*matrix)[13] * v.y + (*matrix)[14] * v.z + (*matrix)[15] * v.w
+	);
 }
 #endif

@@ -4,9 +4,10 @@
 #include <vector>
 
 #include "Matrix4x4.h"
+#include "Draw.h"
 
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 800;
+extern const unsigned int SCR_WIDTH = 800;
+extern const unsigned int SCR_HEIGHT = 600;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -39,10 +40,13 @@ int main()
 
 	//-----------------------------------------
 
+	Draw<float> w;
 
 	std::vector<int> points = {
-
-	}
+		3,0,0,
+		-3,0,0,
+		0,0,3
+	};
 
 	//-----------------------------------------
 
@@ -50,7 +54,7 @@ int main()
 	{
 		processInput(window);
 
-		
+		writeMesh(points, w);
 
 
 		glfwSwapBuffers(window);

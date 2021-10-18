@@ -2,9 +2,13 @@
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
+#include "Shader.h"
+
 template<typename T>
 class Vector3D
 {
+
+	template <typename T> friend void ShaderMethod::VertexShader(Draw<T>& w);
 
 	friend Vector3D& operator+(const Vector3D&, const Vector3D&);
 	friend Vector3D& operator-(const Vector3D&, const Vector3D&);

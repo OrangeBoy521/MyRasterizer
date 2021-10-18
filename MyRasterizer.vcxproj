@@ -148,8 +148,10 @@
     <ClInclude Include="Draw.h" />
     <ClInclude Include="Matrix3x3.h" />
     <ClInclude Include="Matrix4x4.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="Vector3D.h" />
+    <ClInclude Include="Vector4D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
